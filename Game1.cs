@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using HarvestValley.Discord;
 
 namespace HarvestValley;
 
@@ -8,6 +9,7 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private DiscordPresence? _discordPresence;
 
     public Game1()
     {
@@ -18,7 +20,10 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
-        // TODO: Add your initialization logic here
+        _discordPresence =
+            new DiscordPresence();
+
+        _discordPresence.Initialize();
 
         base.Initialize();
     }
@@ -47,5 +52,17 @@ public class Game1 : Game
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);
+    }
+
+    protected override void Dispose(
+        bool disposing
+    )
+    {
+        if (disposing)
+        {
+            _discordPresence?.Dispose();
+        }
+
+        base.Dispose(disposing);
     }
 }
