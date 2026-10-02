@@ -3,6 +3,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <RollForward>Major</RollForward>
+
+    <RootNamespace>HarvestValley</RootNamespace>
+    <AssemblyName>Harvest Valley</AssemblyName>
+
+    <Product>Harvest Valley</Product>
+    <Title>Harvest Valley</Title>
+
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
     <Nullable>enable</Nullable>

@@ -8,7 +8,7 @@ namespace HarvestValley;
 public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    private SpriteBatch _spriteBatch = null!;
     private DiscordPresence? _discordPresence;
 
     public Game1()
@@ -16,6 +16,7 @@ public class Game1 : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        Window.Title = "Harvest Valley";
     }
 
     protected override void Initialize()
