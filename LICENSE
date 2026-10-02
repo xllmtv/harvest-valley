@@ -1,0 +1,408 @@
+![License](https://img.shields.io/badge/license-Proprietary-red)
+
+HARVEST VALLEY PROPRIETARY LICENSE
+Version 1.0
+
+Copyright © 2026 Jakub Burzyński
+All rights reserved.
+
+This proprietary license ("License") governs the use of the source code,
+software, artwork, graphics, audio, music, characters, story elements,
+documentation, branding, trademarks, game assets, data files, and all other
+materials associated with the Harvest Valley project (collectively, the
+"Project").
+
+By accessing, viewing, downloading, cloning, forking, or otherwise obtaining
+any portion of the Project, you acknowledge and agree to the terms of this
+License.
+
+-------------------------------------------------------------------------------
+1. OWNERSHIP
+-------------------------------------------------------------------------------
+
+The Project, including but not limited to:
+
+- source code;
+- executable software;
+- game logic;
+- gameplay systems;
+- architecture;
+- scripts;
+- shaders;
+- tools;
+- editors;
+- configuration files;
+- databases;
+- data files;
+- maps;
+- levels;
+- game worlds;
+- dialogue;
+- quests;
+- characters;
+- character designs;
+- names;
+- stories;
+- lore;
+- artwork;
+- sprites;
+- textures;
+- animations;
+- illustrations;
+- icons;
+- user interface elements;
+- logos;
+- branding;
+- audio;
+- sound effects;
+- music;
+- promotional materials;
+- documentation;
+- and other original materials;
+
+is owned by Jakub Burzyński or its respective licensors and is protected
+by applicable copyright, trademark, intellectual property, and other laws.
+
+No ownership rights are transferred under this License.
+
+-------------------------------------------------------------------------------
+2. LIMITED PERMISSION TO VIEW
+-------------------------------------------------------------------------------
+
+You are granted a limited, revocable, non-exclusive, non-transferable,
+non-sublicensable permission to view and inspect publicly available portions
+of the Project for personal, educational, evaluation, or reference purposes.
+
+This permission does not constitute an open-source license.
+
+Unless explicit written permission is granted by Jakub Burzyński, you may
+not use any portion of the Project in your own software, game, service,
+commercial product, public project, or derivative work.
+
+-------------------------------------------------------------------------------
+3. PROHIBITED USES
+-------------------------------------------------------------------------------
+
+Without prior explicit written permission from Jakub Burzyński, you may not:
+
+a. copy, reproduce, or redistribute the Project or any substantial portion of
+   it;
+
+b. modify the Project for redistribution or publication;
+
+c. create or distribute derivative works based on the Project;
+
+d. incorporate source code from the Project into another application, game,
+   library, framework, service, or product;
+
+e. use the Project or any portion of it for commercial purposes;
+
+f. sell, sublicense, rent, lease, monetize, or otherwise commercially exploit
+   the Project;
+
+g. distribute compiled builds, modified builds, unofficial releases, or
+   repackaged versions of Harvest Valley;
+
+h. remove, alter, conceal, or replace copyright notices, attribution notices,
+   license information, branding, or ownership information;
+
+i. represent any modified or unofficial version as an official Harvest Valley
+   release;
+
+j. use the Project to create a competing product or substantially similar
+   commercial game based directly on Harvest Valley's protected materials;
+
+k. extract and reuse artwork, sprites, textures, animations, audio, music,
+   maps, dialogue, story content, characters, UI elements, icons, or other
+   assets outside the Project;
+
+l. use Harvest Valley branding, logos, names, or other identifying marks in a
+   manner that implies sponsorship, endorsement, affiliation, or official
+   status;
+
+m. sublicense any rights relating to the Project;
+
+n. redistribute the Project under another license;
+
+o. claim authorship or ownership of any portion of the Project that you did
+   not create.
+
+-------------------------------------------------------------------------------
+4. FORKS AND COPIES
+-------------------------------------------------------------------------------
+
+Where a hosting platform such as GitHub technically permits cloning or
+forking of a repository, such functionality does not grant additional
+copyright or intellectual property rights beyond those expressly stated in
+this License.
+
+A fork or clone may be maintained solely for private evaluation,
+experimentation, testing, or contribution preparation.
+
+Public redistribution of modified versions, compiled builds, derivative
+projects, or repackaged versions of the Project is prohibited unless prior
+written permission has been granted by Jakub Burzyński.
+
+Any rights necessarily granted by the applicable hosting platform's terms of
+service remain subject to those terms.
+
+-------------------------------------------------------------------------------
+5. SOURCE CODE
+-------------------------------------------------------------------------------
+
+Access to source code does not mean that the source code is open source.
+
+The source code remains proprietary.
+
+You may read and study publicly available source code, but no license is
+granted to:
+
+- reuse it;
+- redistribute it;
+- publish modified versions;
+- incorporate it into another project;
+- sublicense it;
+- sell it;
+- or use it as part of a commercial product.
+
+Small portions may only be used where independently permitted by applicable
+law.
+
+-------------------------------------------------------------------------------
+6. ARTWORK, AUDIO, MUSIC, AND GAME ASSETS
+-------------------------------------------------------------------------------
+
+All original Harvest Valley assets are proprietary unless an individual asset
+is explicitly identified as being distributed under another license.
+
+This includes, without limitation:
+
+- sprites;
+- character art;
+- portraits;
+- tilesets;
+- textures;
+- backgrounds;
+- maps;
+- environment artwork;
+- animations;
+- particle artwork;
+- UI artwork;
+- icons;
+- logos;
+- promotional artwork;
+- sound effects;
+- music;
+- voice recordings;
+- dialogue;
+- fonts created specifically for the Project;
+- and other audiovisual materials.
+
+These materials may not be extracted, copied, reused, modified, redistributed,
+or incorporated into another project without explicit written permission.
+
+-------------------------------------------------------------------------------
+7. HARVEST VALLEY NAME AND BRANDING
+-------------------------------------------------------------------------------
+
+The name "Harvest Valley", its logos, visual identity, character names,
+fictional locations, distinctive branding elements, and associated marks are
+reserved by Jakub Burzyński.
+
+Nothing in this License grants permission to use Harvest Valley branding as a
+trademark, business name, product name, domain name, social media identity, or
+other commercial identifier.
+
+You may not create or distribute material designed to appear official when it
+is not authorized by Jakub Burzyński.
+
+-------------------------------------------------------------------------------
+8. SCREENSHOTS, VIDEOS, STREAMING, AND REVIEWS
+-------------------------------------------------------------------------------
+
+Unless otherwise stated by Jakub Burzyński, reasonable use of publicly
+released versions of Harvest Valley for:
+
+- gameplay videos;
+- livestreams;
+- screenshots;
+- reviews;
+- commentary;
+- journalism;
+- tutorials;
+- and non-misleading community discussion;
+
+is permitted, provided that such use does not distribute the Project's source
+code or standalone proprietary assets and does not imply official endorsement
+or ownership.
+
+This permission may be revoked in cases involving fraud, impersonation,
+misrepresentation, or unlawful activity.
+
+-------------------------------------------------------------------------------
+9. MODIFICATIONS AND MODDING
+-------------------------------------------------------------------------------
+
+No general right to create, publish, or distribute modifications is granted
+under this License.
+
+If official modding support is introduced, separate modding terms may govern
+the creation and distribution of modifications.
+
+Until such terms are published, redistribution of modified Harvest Valley
+executables, source code, or proprietary assets requires explicit written
+permission from Jakub Burzyński.
+
+-------------------------------------------------------------------------------
+10. CONTRIBUTIONS
+-------------------------------------------------------------------------------
+
+If you submit source code, artwork, documentation, bug fixes, suggestions, or
+other material to the Project through a pull request or another contribution
+mechanism, you represent that you have the legal right to submit that
+contribution.
+
+Unless otherwise agreed in writing, by submitting a contribution you grant
+Jakub Burzyński a worldwide, perpetual, irrevocable, non-exclusive,
+transferable, sublicensable, royalty-free license to:
+
+- use;
+- reproduce;
+- modify;
+- adapt;
+- distribute;
+- publicly display;
+- publicly perform;
+- sublicense;
+- incorporate;
+- and commercially exploit
+
+that contribution as part of Harvest Valley or related products.
+
+You retain ownership of copyright in your original contribution unless a
+separate written agreement provides otherwise.
+
+Submitting a contribution does not grant you ownership of the Harvest Valley
+Project or any rights to other portions of the Project.
+
+-------------------------------------------------------------------------------
+11. THIRD-PARTY COMPONENTS
+-------------------------------------------------------------------------------
+
+The Project may contain or depend upon third-party libraries, frameworks,
+tools, fonts, assets, or other materials.
+
+Such third-party materials remain subject to their respective licenses and
+copyright notices.
+
+This License does not attempt to restrict rights independently granted by the
+license of a third-party component.
+
+Where a conflict exists, the third-party license governs that third-party
+component only.
+
+-------------------------------------------------------------------------------
+12. NO PATENT, TRADEMARK, OR OTHER IMPLIED LICENSE
+-------------------------------------------------------------------------------
+
+Except for the limited rights expressly granted in this License, no rights are
+granted by implication, estoppel, or otherwise.
+
+In particular, no patent, trademark, trade dress, branding, or commercial
+exploitation rights are granted.
+
+-------------------------------------------------------------------------------
+13. TERMINATION
+-------------------------------------------------------------------------------
+
+Your rights under this License automatically terminate if you violate any of
+its terms.
+
+Upon termination, you must cease all unauthorized use and distribution of the
+Project and, where legally required, delete unauthorized copies in your
+possession or control.
+
+Termination does not limit any rights or remedies available to Jakub Burzyński.
+
+-------------------------------------------------------------------------------
+14. NO WARRANTY
+-------------------------------------------------------------------------------
+
+THE PROJECT IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT,
+ACCURACY, RELIABILITY, OR AVAILABILITY.
+
+USE OF THE PROJECT IS AT YOUR OWN RISK.
+
+-------------------------------------------------------------------------------
+15. LIMITATION OF LIABILITY
+-------------------------------------------------------------------------------
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER,
+CONTRIBUTORS, AND LICENSORS SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR OTHER DAMAGES ARISING FROM
+ACCESS TO OR USE OF THE PROJECT.
+
+THIS INCLUDES, WITHOUT LIMITATION, LOSS OF DATA, LOSS OF PROFITS, BUSINESS
+INTERRUPTION, DEVICE FAILURE, OR OTHER COMMERCIAL OR PERSONAL DAMAGES.
+
+-------------------------------------------------------------------------------
+16. RESERVATION OF RIGHTS
+-------------------------------------------------------------------------------
+
+All rights not expressly granted under this License are reserved.
+
+No failure to enforce any provision of this License shall constitute a waiver
+of that provision or any other right.
+
+-------------------------------------------------------------------------------
+17. SEVERABILITY
+-------------------------------------------------------------------------------
+
+If any provision of this License is determined to be invalid, illegal, or
+unenforceable, the remaining provisions shall continue in full force to the
+maximum extent permitted by law.
+
+-------------------------------------------------------------------------------
+18. CHANGES TO THIS LICENSE
+-------------------------------------------------------------------------------
+
+Jakub Burzyński may publish updated versions of this License for future
+versions of the Project.
+
+A version of the Project already distributed remains governed by the license
+terms applicable to that version unless otherwise agreed.
+
+-------------------------------------------------------------------------------
+19. GOVERNING LAW
+-------------------------------------------------------------------------------
+
+This License shall be governed by and interpreted in accordance with the laws
+of the Republic of Poland, excluding its conflict-of-law rules, except where
+mandatory applicable law provides otherwise.
+
+Any disputes relating to this License shall be subject to the jurisdiction of
+the competent courts in Kędzierzyn-Koźle, Poland, unless applicable law
+requires otherwise.
+
+-------------------------------------------------------------------------------
+20. PERMISSION REQUESTS
+-------------------------------------------------------------------------------
+
+Requests for commercial use, redistribution, licensing, partnerships, or
+other permissions may be submitted to:
+
+Jakub Burzyński
+Kędzierzyn-Koźle, Poland
+Email: kuba64093@gmail.com
+
+Permission is valid only when granted explicitly in writing by Jakub Burzyński.
+
+-------------------------------------------------------------------------------
+
+HARVEST VALLEY
+Copyright © 2026 Jakub Burzyński
+All rights reserved.
+
+This Project is proprietary software and is not open source.

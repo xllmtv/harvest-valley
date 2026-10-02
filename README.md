@@ -235,8 +235,10 @@ The world should continue moving even when the player is focused on something el
 
 ## License
 
-Copyright © Harvest Valley.
+Harvest Valley is proprietary software.
 
-All rights reserved.
+Source code is made publicly available for viewing and contribution purposes
+only. No permission is granted to copy, redistribute, modify, sublicense, or
+use the project or its assets in another product unless explicitly authorized.
 
-The source code, artwork, music, characters, game assets, and other project materials may not be copied, redistributed, or used without permission.
+See [LICENSE](LICENSE) for the full license terms.
