@@ -12,6 +12,8 @@ public sealed class DiscordPresence : IDisposable
 
     public void Initialize()
     {
+        Console.WriteLine("[DISCORD] Initializing...");
+
         try
         {
             _client = new DiscordRpcClient(ClientId)
@@ -25,14 +27,21 @@ public sealed class DiscordPresence : IDisposable
             _client.OnReady += (_, e) =>
             {
                 Console.WriteLine(
-                    $"Discord RPC connected: {e.User.Username}"
+                    $"[DISCORD] Connected as {e.User.Username}"
                 );
             };
 
             _client.OnError += (_, e) =>
             {
                 Console.WriteLine(
-                    $"Discord RPC error: {e.Message}"
+                    $"[DISCORD] Error: {e.Message}"
+                );
+            };
+
+            _client.OnConnectionFailed += (_, _) =>
+            {
+                Console.WriteLine(
+                    "[DISCORD] Connection failed."
                 );
             };
 
@@ -64,11 +73,13 @@ public sealed class DiscordPresence : IDisposable
                     ]
                 }
             );
+
+            Console.WriteLine("[DISCORD] Presence active.");
         }
         catch (Exception ex)
         {
             Console.WriteLine(
-                $"Discord RPC initialization failed: {ex.Message}"
+                $"[DISCORD] Initialization failed: {ex.Message}"
             );
         }
     }
@@ -78,14 +89,20 @@ public sealed class DiscordPresence : IDisposable
         string state
     )
     {
-        if (_client is null ||
-            !_client.IsInitialized)
+        if (
+            _client is null ||
+            !_client.IsInitialized
+        )
         {
             return;
         }
 
         _client.UpdateDetails(details);
         _client.UpdateState(state);
+
+        Console.WriteLine(
+            $"[DISCORD] Updated: {details} | {state}"
+        );
     }
 
     public void Dispose()
@@ -93,13 +110,18 @@ public sealed class DiscordPresence : IDisposable
         if (_client is null)
             return;
 
+        Console.WriteLine("[DISCORD] Shutting down...");
+
         try
         {
             _client.ClearPresence();
             _client.Dispose();
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine(
+                $"[DISCORD] Shutdown error: {ex.Message}"
+            );
         }
 
         _client = null;
