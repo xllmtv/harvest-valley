@@ -8,62 +8,63 @@ using HarvestValley.Systems;
 
 namespace HarvestValley;
 
-public class Game1 : Game
+public sealed class Game1 : Game
 {
     private readonly GraphicsDeviceManager _graphics;
+
     private SpriteBatch _spriteBatch = null!;
+    private Texture2D _wallpaper = null!;
     private DiscordPresence? _discordPresence;
 
     public Game1()
     {
-        _graphics = new GraphicsDeviceManager(this);
-
+        _graphics = new GraphicsDeviceManager(this)
+        {
+            IsFullScreen = false
+        };
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
         Window.Title = "Harvest Valley";
-
-        Console.WriteLine("======================================");
-        Console.WriteLine(" Harvest Valley (0.0.1)");
-        Console.WriteLine("======================================");
+        Window.AllowUserResizing = true;
+        Window.IsBorderless = false;
+        LogStartupHeader();
     }
 
     protected override void Initialize()
     {
-        RealWorldSeason season = SeasonalIconManager.GetCurrentSeason();
-
-        string bmpPath = SeasonalIconManager.GetBmpPath();
-        string icoPath = SeasonalIconManager.GetIcoPath();
-
-        Console.WriteLine(
-            $"[GAME] Starting | {DateTime.Now:MMMM} | {season}"
-        );
-
-        Console.WriteLine(
-            $"[ICON] BMP: {File.Exists(bmpPath)} | ICO: {File.Exists(icoPath)}"
-        );
-
-        _discordPresence = new DiscordPresence();
-        _discordPresence.Initialize();
-
+        SeasonalIconManager.Initialize(Window.Handle);
+        LogEnvironment();
+        InitializeDiscord();
         base.Initialize();
-
         Console.WriteLine("[GAME] Ready.");
     }
 
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+        string wallpaperPath = Path.Combine(
+            AppContext.BaseDirectory, "Assets", "Background", "wallpaper.png"
+        );
+        using var wallpaperStream = File.OpenRead(wallpaperPath);
+        _wallpaper = Texture2D.FromStream(GraphicsDevice, wallpaperStream);
+        Console.WriteLine("[GAME] Content loaded.");
+    }
+
+    protected override void BeginRun()
+    {
+        base.BeginRun();
+        WindowManager.Maximize(Window.Handle);
     }
 
     protected override void Update(GameTime gameTime)
     {
-        if (
-            GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-            Keyboard.GetState().IsKeyDown(Keys.Escape)
-        )
+        SeasonalIconManager.Update();
+
+        if (ShouldExit())
         {
             Console.WriteLine("[GAME] Exit requested.");
             Exit();
+            return;
         }
 
         base.Update(gameTime);
@@ -71,8 +72,22 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
 
+        Viewport viewport = GraphicsDevice.Viewport;
+        float scale = Math.Max(
+            (float)viewport.Width / _wallpaper.Width,
+            (float)viewport.Height / _wallpaper.Height
+        );
+        var center = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
+        var origin = new Vector2(_wallpaper.Width / 2f, _wallpaper.Height / 2f);
+
+        _spriteBatch.Begin(samplerState: SamplerState.LinearClamp);
+        _spriteBatch.Draw(
+            _wallpaper, center, null, Color.White, 0f, origin,
+            scale, SpriteEffects.None, 0f
+        );
+        _spriteBatch.End();
         base.Draw(gameTime);
     }
 
@@ -81,11 +96,70 @@ public class Game1 : Game
         if (disposing)
         {
             Console.WriteLine("[GAME] Shutting down...");
-
             _discordPresence?.Dispose();
+            _discordPresence = null;
+            _wallpaper?.Dispose();
             _spriteBatch?.Dispose();
         }
 
         base.Dispose(disposing);
+    }
+
+    private void InitializeDiscord()
+    {
+        _discordPresence = new DiscordPresence();
+        _discordPresence.Initialize();
+    }
+
+    private static bool ShouldExit()
+    {
+        KeyboardState keyboardState = Keyboard.GetState();
+        GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
+
+        return
+            keyboardState.IsKeyDown(Keys.Escape) ||
+            gamePadState.Buttons.Back == ButtonState.Pressed;
+    }
+
+    private static void LogStartupHeader()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+        Console.WriteLine("""
+        
+        ██╗  ██╗ █████╗ ██████╗ ██╗   ██╗███████╗███████╗████████╗
+        ██║  ██║██╔══██╗██╔══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝
+        ███████║███████║██████╔╝██║   ██║█████╗  ███████╗   ██║
+        ██╔══██║██╔══██║██╔══██╗╚██╗ ██╔╝██╔══╝  ╚════██║   ██║
+        ██║  ██║██║  ██║██║  ██║ ╚████╔╝ ███████╗███████║   ██║
+        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝   ╚═╝
+
+                        🌾  V A L L E Y  🌾
+        
+        """);
+
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("              Growing something new.");
+
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("                   Version 0.0.1");
+        Console.WriteLine();
+
+        Console.ResetColor();
+    }
+
+    private static void LogEnvironment()
+    {
+        Console.WriteLine(
+            $"[GAME] Starting | " +
+            $"{DateTime.Now:MMMM} | " +
+            $"{SeasonalIconManager.CurrentSeason}"
+        );
+
+        Console.WriteLine(
+            $"[ICON] BMP: {SeasonalIconManager.BmpExists()} | " +
+            $"ICO: {SeasonalIconManager.IcoExists()} | " +
+            $"ICNS: {SeasonalIconManager.IcnsExists()}"
+        );
     }
 }
