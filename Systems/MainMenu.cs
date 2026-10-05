@@ -130,7 +130,7 @@ internal sealed class MainMenu : IDisposable
 
         float scale = Math.Max(0.75f, GetScale(viewport));
         Vector2 footerPosition = GetFooterPosition(viewport);
-        int width = (int)MathF.Round(200 * scale);
+        int width = (int)MathF.Round(220 * scale);
         int height = (int)MathF.Round(width * (float)DiscordButtonSource.Height / DiscordButtonSource.Width);
         int gap = (int)MathF.Round(16 * scale);
         return new Rectangle((int)footerPosition.X, (int)footerPosition.Y - gap - height, width, height);
