@@ -11,6 +11,7 @@ namespace HarvestValley.Systems;
 internal sealed class MainMenu : IDisposable
 {
     private const int DiscordButtonIndex = 4;
+    private const int SettingsButtonIndex = 5;
     private const string DiscordInviteUrl = "https://discord.gg/47arx2ZE6m";
     private static readonly Rectangle DiscordButtonSource = new(21, 13, 99, 34);
     private static readonly Vector2 ReferenceSize = new(1672, 941);
@@ -32,7 +33,8 @@ internal sealed class MainMenu : IDisposable
             LoadTexture(graphicsDevice, "button-load.png"),
             LoadTexture(graphicsDevice, "button-coop.png"),
             LoadTexture(graphicsDevice, "button-exit.png"),
-            LoadTexture(graphicsDevice, "button-discord.png")
+            LoadTexture(graphicsDevice, "button-discord.png"),
+            LoadTexture(graphicsDevice, "button-settings.png")
         ];
         _footerFont = PixelFont.Load(graphicsDevice, Path.Combine(
             AppContext.BaseDirectory, "Assets", "Gui", "Fonts", "MenuPixel.json"));
@@ -125,6 +127,17 @@ internal sealed class MainMenu : IDisposable
 
     private Rectangle GetButtonBounds(Viewport viewport, int index)
     {
+        if (index == SettingsButtonIndex)
+        {
+            float settingsScale = Math.Max(0.75f, GetScale(viewport));
+            int margin = (int)MathF.Round(Math.Max(20, 24 * GetScale(viewport)));
+            int settingsWidth = (int)MathF.Round(64 * settingsScale);
+            int settingsHeight = (int)MathF.Round(settingsWidth *
+                (float)_buttons[index].Height / _buttons[index].Width);
+            return new Rectangle(viewport.Width - margin - settingsWidth,
+                margin, settingsWidth, settingsHeight);
+        }
+
         if (index != DiscordButtonIndex)
             return Transform(viewport, new Rectangle(707, 419 + index * 116, 258, 86));
 
