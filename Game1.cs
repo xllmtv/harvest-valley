@@ -14,6 +14,7 @@ public sealed class Game1 : Game
 
     private SpriteBatch _spriteBatch = null!;
     private Texture2D _wallpaper = null!;
+    private MainMenu _mainMenu = null!;
     private DiscordPresence? _discordPresence;
 
     public Game1()
@@ -47,6 +48,7 @@ public sealed class Game1 : Game
         );
         using var wallpaperStream = File.OpenRead(wallpaperPath);
         _wallpaper = Texture2D.FromStream(GraphicsDevice, wallpaperStream);
+        _mainMenu = new MainMenu(GraphicsDevice);
         Console.WriteLine("[GAME] Content loaded.");
     }
 
@@ -60,7 +62,7 @@ public sealed class Game1 : Game
     {
         SeasonalIconManager.Update();
 
-        if (ShouldExit())
+        if (_mainMenu.Update(GraphicsDevice.Viewport, IsActive) || ShouldExit())
         {
             Console.WriteLine("[GAME] Exit requested.");
             Exit();
@@ -88,6 +90,7 @@ public sealed class Game1 : Game
             scale, SpriteEffects.None, 0f
         );
         _spriteBatch.End();
+        _mainMenu.Draw(_spriteBatch, viewport);
         base.Draw(gameTime);
     }
 
@@ -99,6 +102,7 @@ public sealed class Game1 : Game
             _discordPresence?.Dispose();
             _discordPresence = null;
             _wallpaper?.Dispose();
+            _mainMenu?.Dispose();
             _spriteBatch?.Dispose();
         }
 
@@ -142,7 +146,7 @@ public sealed class Game1 : Game
         Console.WriteLine("              Growing something new.");
 
         Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine("                   Version 0.0.1");
+        Console.WriteLine($"                   Version {GameVersion.Current}");
         Console.WriteLine();
 
         Console.ResetColor();

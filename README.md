@@ -242,3 +242,11 @@ only. No permission is granted to copy, redistribute, modify, sublicense, or
 use the project or its assets in another product unless explicitly authorized.
 
 See [LICENSE](LICENSE) for the full license terms.
+
+## Application Version
+
+Edit `version.txt` in the project root (for example, `0.0.2`) to set the
+version displayed in the main menu and startup log. The file is copied next
+to the executable during build and publish. In a distributed build, edit
+that copy and restart the game. Pre-release versions such as `0.1.0-beta.1`
+are also supported.
