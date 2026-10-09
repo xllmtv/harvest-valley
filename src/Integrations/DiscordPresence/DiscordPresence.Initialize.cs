@@ -2,7 +2,7 @@ using System;
 using DiscordRPC;
 using DiscordRPC.Logging;
 
-namespace HarvestValley.Integrations.Discord;
+namespace HarvestValley.Integrations;
 
 public sealed partial class DiscordPresence
 {

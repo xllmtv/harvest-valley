@@ -1,4 +1,4 @@
-using HarvestValley.Integrations.Discord;
+using HarvestValley.Integrations;
 
 namespace HarvestValley.Application;
 

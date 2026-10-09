@@ -1,7 +1,7 @@
 using System;
 using DiscordRPC.Message;
 
-namespace HarvestValley.Integrations.Discord;
+namespace HarvestValley.Integrations;
 
 public sealed partial class DiscordPresence
 {

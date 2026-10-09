@@ -1,5 +1,5 @@
 using HarvestValley.Input;
-using HarvestValley.Integrations.Discord;
+using HarvestValley.Integrations;
 using HarvestValley.Scenes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
