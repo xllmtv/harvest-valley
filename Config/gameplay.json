@@ -1,0 +1,6 @@
+{
+  "MovementSpeed": 120,
+  "WalkFramesPerSecond": 8,
+  "CameraFollowSharpness": 12,
+  "CharacterScale": 1.0
+}
